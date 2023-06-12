@@ -21,7 +21,7 @@ export function compressValuesInJson (conentJson: any, path: string, pairs: [str
 
 /**
  * group pairs into two category, pairs need to be translated or not
- * @param pairs 
+ * @param pairs
  */
 export function groupPairs (pairs: [string, any][]): {
     requireTranslation: [string, string][],
@@ -65,7 +65,7 @@ export async function createChatCompletion(props: ICreateChatCompletionProps, co
     }
     if (config.serviceProvider === 'openai') {
         // openai chat completion
-        url = 'https://api.openai.com/v1/engines/davinci/completions'
+        url = 'https://api.openai.com/v1/chat/completions'
         headers['Authorization'] = `Bearer ${config.apiKey}`
     } else if (config.serviceProvider === 'azure') {
         headers['api-key'] = `${config.apiKey}`

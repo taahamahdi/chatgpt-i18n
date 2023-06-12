@@ -30,7 +30,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
                         content: content,
                     },
                 ],
-                max_tokens: 1000,
+                max_tokens: 500,
             }, { timeout:5000 });
             result.push({
                 lang,

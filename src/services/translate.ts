@@ -14,7 +14,7 @@ export async function translateService(req: IReqBody) {
     const messages: IMessage[] = [
         {
             role: "system",
-            content: `You are a helpful assistant that translates a i18n locale array content to ${targetLang}. 
+            content: `You are a helpful assistant that translates a i18n locale array content to ${targetLang}.
             It's a array structure, contains many strings, translate each of them and make a new array of translated strings.
             Consider all the string as a context to make better translation.\n`,
         },
@@ -41,7 +41,7 @@ export async function translateService(req: IReqBody) {
         noTranslation
     })
     const tasks: string[][] = [];
-    const CHUNK_SIZE = 1000;
+    const CHUNK_SIZE = 500;
     let chunk: string[] = [];
     let chunkSize = 0;
     let chunkIndex = 0;
